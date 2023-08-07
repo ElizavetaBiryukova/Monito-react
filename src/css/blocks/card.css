@@ -97,6 +97,6 @@
         font-weight: 700;
         text-align: center;
         padding: 8px 10px;
-        background: var(--light-yellow) url("../../images/icons/prize.svg") no-repeat 10%;
+        background: var(--light-yellow) url("../../assets/images/icons/prize.svg") no-repeat 10%;
     }
 }
