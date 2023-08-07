@@ -1,6 +1,6 @@
 import { Card } from "../card/card"
 
-export function CatalogCards() {
+export function CatalogCards(): JSX.Element {
     return (
         <>
             <ul className="pets__catalog catalog__cards">

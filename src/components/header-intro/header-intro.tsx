@@ -1,4 +1,4 @@
-export function HeaderIntro() {
+export function HeaderIntro(): JSX.Element {
     return (
         <>
             <section className="header__intro intro intro--yellow">

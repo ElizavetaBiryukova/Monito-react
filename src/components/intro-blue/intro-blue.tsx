@@ -1,4 +1,4 @@
-export function IntroBlue() {
+export function IntroBlue(): JSX.Element {
     return (
         <>
             <section className="intro intro--blue">

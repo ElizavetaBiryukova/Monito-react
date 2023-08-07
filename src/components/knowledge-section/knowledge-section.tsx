@@ -1,6 +1,6 @@
 import { CardKnowledge } from "../card-knowledge/card-knowledge";
 
-export function KnowledgeSection() {
+export function KnowledgeSection(): JSX.Element {
     return (
         <>
             <section className="knowledge">

@@ -6,7 +6,7 @@ import good_boy from '../../assets/images/brends/good_boy.png'
 import butcher from '../../assets/images/brends/butcher.png'
 import pedigree from '../../assets/images/brends/pedigree.png'
 
-export function BrendsSection() {
+export function BrendsSection(): JSX.Element {
     return (
         <>
             <section className="brends">

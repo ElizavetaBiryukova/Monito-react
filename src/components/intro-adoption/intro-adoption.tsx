@@ -1,4 +1,4 @@
-export function IntroAdoption() {
+export function IntroAdoption(): JSX.Element {
     return (
         <>
             <section className="intro intro--adoption">

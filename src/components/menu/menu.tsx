@@ -2,7 +2,7 @@ import { ReactComponent as Logo } from '../../assets/images/icons/logo.svg';
 import { ReactComponent as Glass } from '../../assets/images/icons/glass.svg';
 import Vnd from '../../assets/images/currency/vnd.svg';
 
-export function Menu() {
+export function Menu(): JSX.Element {
     return (
         <>
                 <div className="header__menu menu">

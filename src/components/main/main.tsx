@@ -6,7 +6,7 @@ import { IntroAdoption } from "../intro-adoption/intro-adoption";
 import { KnowledgeSection } from "../knowledge-section/knowledge-section";
 
 
-export function Main() {
+export function Main(): JSX.Element {
     return (
         <>
             <main className="main">

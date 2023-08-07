@@ -1,4 +1,4 @@
-export function Card() {
+export function Card(): JSX.Element {
     return (
         <>
             <li className="catalog__card card">

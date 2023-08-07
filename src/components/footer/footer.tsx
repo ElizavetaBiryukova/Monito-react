@@ -3,7 +3,7 @@ import { ReactComponent as Instagram } from '../../assets/images/icons/instagram
 import { ReactComponent as Youtube } from '../../assets/images/icons/youtube.svg'
 import { ReactComponent as Logo } from '../../assets/images/icons/logo.svg'
 
-export function Footer() {
+export function Footer(): JSX.Element {
     return (
         <>
             <footer className="footer">

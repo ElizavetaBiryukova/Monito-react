@@ -1,7 +1,7 @@
 import { CatalogProducts } from "../catalog-products/catalog-cards";
 
 
-export function ProductsSection() {
+export function ProductsSection(): JSX.Element {
     return (
         <>
             <section className="products">

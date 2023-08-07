@@ -1,4 +1,4 @@
-export function CardKnowledge() {
+export function CardKnowledge(): JSX.Element {
     return (
         <>
             <li className="knowledge__item">
