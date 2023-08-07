@@ -1,0 +1,19 @@
+.info {
+    margin-top: 25px;
+}
+
+.info__table {
+    color: var(--darkest-grey);
+    border-collapse: collapse;
+}
+
+.info__line {
+    border-collapse: collapse;
+    border-spacing: 20px;
+    border-bottom: 1px solid var(--grey);
+    height: 45px;
+}
+
+.info__column {
+    width: 50%;
+}

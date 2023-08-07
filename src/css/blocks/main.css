@@ -1,0 +1,19 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 16px;
+}
+
+@media (min-width: 1279px) {
+    .main {
+        position: relative;
+        margin: 42px 130px 25px 130px;
+    }
+}
+
+@media (min-width: 1324px) {
+    .main {
+        max-width: 1200px;
+        margin: auto;
+    }
+}

@@ -1,0 +1,374 @@
+.intro {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 0px 15px;
+}
+
+.intro__title {
+    display: flex;
+    flex-direction: column;
+    color: var(--basic-dark-blue);
+    text-transform: capitalize;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.intro__buttons {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 40px;
+}
+
+.intro__link {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.intro__button {
+    min-width: 163px;
+    box-sizing: border-box;
+    border: 1.5px solid var(--basic-dark-blue);
+    border-radius: 57px;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 10px;
+}
+
+.intro__button--view {
+    color: var(--basic-dark-blue);
+    position: relative;
+    padding-left: 0px;
+}
+
+.intro__button--view::after {
+    content: '';
+    position: absolute;
+    left: 76%;
+    top: 28.5%;
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid var(--basic-dark-blue);
+    border-radius: 50%;
+}
+
+.intro__button--view::before {
+    content: '►';
+    position: absolute;
+    left: 77%;
+    top: 24.5%;
+    width: 18px;
+    height: 18px;
+}
+
+.intro__button--explore {
+    background-color: var(--basic-dark-blue);
+    color: var(--basic-grey);
+}
+
+.intro--blue {
+    background-color: var(--basic-dark-blue);
+    background-image: url("../../assets/images/girl_being_love_with_her_dog_2.png"),
+        url("../../assets/images/background-dark-blue.svg"),
+        url("../../assets//images/background-light.svg");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center bottom, 48% -123%, 57% 453%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 7px;
+    padding-bottom: 341px;
+    margin-bottom: 28px;
+}
+
+.intro--category {
+    background-color: var(--basic-dark-blue);
+    background-image: url("../../assets/images/group-portrait-adorable-puppies_mob.png"),
+        url("../../assets/images/background-dark-blue.svg"),
+        url("../../assets/images//background-light.svg");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center bottom, 48% -123%, 57% 130%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 7px;
+    padding-bottom: 150px;
+    margin-bottom: 28px;
+
+}
+
+.intro--adoption {
+    display: none;
+}
+
+.intro__string {
+    font-size: 28px;
+    line-height: 38px;
+}
+
+.intro__string--big {
+    font-size: 40px;
+    line-height: 60px;
+    font-weight: 800;
+}
+
+.intro__desription {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 32px;
+}
+
+.intro--yellow .intro__title::after {
+    content: '';
+    position: absolute;
+    top: 73px;
+    right: 76px;
+    width: 12.5px;
+    height: 12.5px;
+    background-color: var(--basic-dark-blue);
+    box-sizing: border-box;
+    border: 1px solid var(--basic-dark-blue);
+    border-radius: 4px;
+    transform: rotate(-9.62deg);
+}
+
+.intro--yellow .intro__title::before {
+    content: '';
+    position: absolute;
+    top: 66px;
+    right: 70px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--yellow);
+    box-sizing: border-box;
+    border: 1px solid var(--yellow);
+    border-radius: 4px;
+    transform: rotate(-9.62deg);
+}
+
+.intro--yellow {
+    position: relative;
+}
+
+.intro--yellow::after {
+    content: '';
+    position: absolute;
+    top: 66px;
+    right: 37px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--yellow);
+    box-sizing: border-box;
+    border: 1px solid var(--yellow);
+    border-radius: 4px;
+    transform: rotate(-9.62deg);
+}
+
+.intro--blue .intro__string--big,
+.intro--category .intro__string--big {
+    font-size: 36px;
+    line-height: 54px;
+}
+
+.intro--blue .intro__string,
+.intro--category .intro__string {
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+}
+
+.intro--blue .intro__buttons,
+.intro--category .intro__buttons {
+    margin-bottom: 31px;
+}
+
+.intro--blue .intro__desription,
+.intro--category .intro__desription {
+    text-align: center;
+}
+
+.intro__link:hover .intro__button--view,
+.intro__link:focus .intro__button--view {
+    background-color: var(--yellow);
+    color: var(--blue);
+    transition: all 0.5s;
+}
+
+.intro__link:hover .intro__button--explore,
+.intro__link:focus .intro__button--explore {
+    background-color: var(--blue);
+    transition: all 0.5s;
+}
+
+@media (max-width: 370px) {
+    .intro__buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro--blue {
+        background-color: var(--basic-dark-blue);
+        background-image: url("../../assets/images/girl_being_love_with_her_dog_2.png"),
+            url("../../assets/images/background-dark-blue.svg"),
+            url("../../assets/images//background-light.svg");
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-position: center bottom, 47% -236%, 77% -207%;
+    }
+}
+
+@media (min-width: 516px) {
+    .intro--blue {
+        background-color: var(--light-yellow);
+    }
+
+    .intro--category {
+        background-image: url("../../assets/images/group-portrait-adorable-puppies_mob.png"),
+            url("../../assets/images/background-dark-blue.svg"),
+            url("../../assets/images/background-light.svg"),
+            url("../../assets/images/background-light.svg");
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-position: center bottom, 48% -123%, 13% 144%, 98% 121%;
+    }
+}
+
+@media (min-width: 1279px) {
+    .intro__title {
+        background: top left url("../../assets/images/background_title.svg") no-repeat;
+    }
+
+    .intro__string--big {
+        font-size: 60px;
+        line-height: 68px;
+        margin-bottom: 10px;
+    }
+
+    .intro--yellow {
+        margin-top: 57px;
+    }
+
+    .intro__string {
+        font-size: 46px;
+        line-height: 60px;
+    }
+
+    .intro__desription {
+        width: 40%;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 40px;
+    }
+
+    .intro--yellow .intro__title::before {
+        position: absolute;
+        top: 66px;
+        right: 598px;
+    }
+
+
+    .intro--yellow .intro__title::after {
+        position: absolute;
+        top: 66px;
+        right: 607px;
+    }
+
+    .intro--yellow::after {
+        position: absolute;
+        top: 57px;
+        right: 581px;
+    }
+
+    .intro--blue,
+    .intro--category {
+        align-items: flex-end;
+        padding-right: 78px;
+        padding-bottom: 9px;
+        background-position: left bottom, -150% -14%, top 89% right -22%;
+        background-color: var(--basic-dark-blue);
+        max-width: 1180px;
+        margin: 40px auto 44px;
+    }
+
+    .intro--category {
+        margin-top: 0px;
+        color: white;
+        background-color: var(--light-yellow);
+        background-position: left bottom, 830% 67%, top 90% right -22%;
+    }
+
+    .intro--category .intro__title {
+        color: white;
+    }
+
+    .intro--blue .intro__string--big,
+    .intro--category .intro__string--big {
+        font-size: 52px;
+        line-height: 68px;
+        text-align: right;
+    }
+
+    .intro--blue .intro__string,
+    .intro--category .intro__string {
+        font-size: 36px;
+        line-height: 54px;
+        text-align: right;
+    }
+
+    .intro--blue .intro__desription,
+    .intro--category .intro__desription {
+        text-align: right;
+    }
+
+    .intro--adoption {
+        display: block;
+        background-color: #FFB775;
+        background-image: url("../../assets/images/hug.png"),
+            url("../../assets/images//background-light.svg");
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-position: right bottom, -21% 20%;
+        padding: 0px 0px 30px 0px;
+        margin: 0px auto 50px;
+        max-width: 1180px;
+        width: 100%;
+    }
+
+    .intro--adoption .intro__title {
+        background: top 20% left 28% url("../../assets/images/icons/paw.svg") no-repeat;
+        margin-left: 25px;
+    }
+
+    .intro--adoption .intro__desription {
+        margin-left: 25px;
+    }
+
+    .intro--adoption .intro__buttons {
+        margin-left: 25px;
+    }
+
+    .intro--category .intro__button--view {
+        color: white;
+        border-color: white;
+    }
+
+    .intro--category .intro__button--explore {
+        color: var(--basic-dark-blue);
+        border-color: white;
+        background-color: white;
+    }
+
+    .intro__button--view::after {
+        border: 1.5px solid white;
+    }
+}
+
+@media (min-width: 1324px) {
+    .intro--category {
+        background-color: var(--basic-dark-blue);
+        background-image: url("../../assets/images/group-portrait-adorable-puppies_mob.png"),
+            url("../../assets/images/background-dark-blue.svg"),
+            url("../../assets/images/background-light.svg");
+        background-position: left bottom, 48% -123%, -42% 115%;
+    }
+}

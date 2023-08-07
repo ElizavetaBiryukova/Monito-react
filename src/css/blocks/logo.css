@@ -1,0 +1,52 @@
+.logo__svg {
+    fill: var(--basic-dark-blue);
+    width: 92px;
+    height: 22px;
+}
+
+.logo__link {
+    text-decoration: none;
+    color: var(--basic-dark-blue);
+}
+
+.logo__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo__caption {
+    font-size: 7px;
+    font-weight: 700;
+    line-height: 14px;
+}
+
+.logo--footer .logo__svg {
+    width: 115px;
+    height: 27px;
+}
+
+.logo--footer {
+    margin-bottom: 20px;
+}
+
+.logo__wrapper:hover .logo__svg {
+    fill: var(--blue);
+    transition: all 0.5s;
+}
+
+.logo__wrapper:hover .logo__caption {
+    color: var(--blue);
+    transition: all 0.5s;
+}
+
+@media (min-width: 1279px) {
+    .logo__svg {
+        width: 115px;
+        height: 27px;
+    }
+
+    .logo__caption {
+        font-size: 9px;
+    }
+}

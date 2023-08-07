@@ -1,0 +1,44 @@
+.caption__title {
+    color: var(--basic-dark-blue);
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+
+.caption__question {
+    color: black;
+    font-weight: 500;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 0px;
+}
+
+@media (min-width: 1279px) {
+    .caption {
+        width: 50%;
+    }
+
+    .caption__question {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .caption__title {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .caption--line {
+        display: flex;
+        gap: 5px;
+    }
+
+    .caption--line .caption__title {
+        margin-bottom: 0px;
+        margin-top: 8px;
+    }
+}

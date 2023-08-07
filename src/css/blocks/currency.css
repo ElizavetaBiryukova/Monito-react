@@ -1,0 +1,15 @@
+@media (min-width: 1279px) {
+    .currency {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+    }
+}
+
+.currency:hover .currency__name,
+.currency:focus .currency__name,
+.currency:hover .currency__pointer,
+.currency:focus .currency__pointer {
+    font-weight: 700;
+    transition: all 0.5s;
+}

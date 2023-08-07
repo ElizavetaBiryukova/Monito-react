@@ -1,0 +1,13 @@
+.service__list {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px 100px;
+}
+
+@media (min-width: 1279px) {
+    .service__list {
+        gap: 17px;
+        padding: 0px;
+        margin-top: 0px;
+    }
+}

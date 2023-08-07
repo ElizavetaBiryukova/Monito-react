@@ -1,0 +1,35 @@
+.view {
+    border: 1.5px solid var(--basic-dark-blue);
+    border-radius: 57px;
+    text-align: center;
+}
+
+.view__link {
+    text-decoration: none;
+    color: var(--basic-dark-blue);
+    text-transform: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.view__sign {
+    padding: 10px 20%;
+}
+
+.view:hover,
+.view:focus {
+    background-color: var(--basic-dark-blue);
+}
+
+.view__link:hover,
+.view__link:focus {
+    color: var(--light-grey);
+}
+
+
+@media (min-width: 1279px) {
+    .view {
+        min-width: 23%
+    }
+}
