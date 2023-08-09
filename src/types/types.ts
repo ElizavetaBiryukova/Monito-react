@@ -8,3 +8,15 @@ export type CardType = {
 }
 
 export type Cards = Array<CardType>;
+
+export type CardProductType = {
+    id: string,
+    image: string,
+    name: string,
+    product: string,
+    size: string,
+    price: number,
+    prize: string
+}
+
+export type CardsProducts = Array<CardProductType>;

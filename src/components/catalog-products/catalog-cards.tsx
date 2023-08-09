@@ -1,10 +1,21 @@
 import { CardProduct } from "../card-product/card-product"
+import { CardsProducts } from "../../types/types"
 
-export function CatalogProducts(): JSX.Element {
+type CatalogProductsProps = {
+    cardsProducts: CardsProducts;
+
+}
+
+export function CatalogProducts({ cardsProducts }: CatalogProductsProps): JSX.Element {
     return (
         <>
             <ul className="products__catalog catalog__cards">
-                <CardProduct />
+                {cardsProducts.map((card) => (
+                    <CardProduct
+                        key={card.id}
+                        cardsProducts={card}
+                    />
+                ))}
             </ul>
         </>
     )

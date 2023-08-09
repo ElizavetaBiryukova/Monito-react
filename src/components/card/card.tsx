@@ -2,7 +2,6 @@ import { CardType } from "../../types/types"
 
 type CardProps = {
     card: CardType;
-
 }
 
 export function Card({ card }: CardProps): JSX.Element {
@@ -26,8 +25,8 @@ export function Card({ card }: CardProps): JSX.Element {
                         </span>
                     </p>
                     <p className="card__value">
-                        <span className="card__price">{card.price}</span>
-                        <span className="card__currency">VND</span>
+                        <span className="card__price">{card.price.toLocaleString()}</span>
+                        <span className="card__currency"> VND</span>
                     </p>
                 </div>
             </li>

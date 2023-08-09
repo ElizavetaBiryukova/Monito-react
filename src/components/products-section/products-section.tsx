@@ -1,7 +1,12 @@
 import { CatalogProducts } from "../catalog-products/catalog-cards";
+import { CardsProducts } from "../../types/types";
+
+type ProductsProps = {
+    cardsProducts: CardsProducts
+}
 
 
-export function ProductsSection(): JSX.Element {
+export function ProductsSection({cardsProducts}: ProductsProps): JSX.Element {
     return (
         <>
             <section className="products">
@@ -16,7 +21,9 @@ export function ProductsSection(): JSX.Element {
                         <div className="view__sign">View more &gt;</div>
                     </a>
                 </div>
-                <CatalogProducts />
+                <CatalogProducts 
+                cardsProducts={cardsProducts}
+                />
             </section>
         </>
     )
