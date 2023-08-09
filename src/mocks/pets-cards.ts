@@ -4,7 +4,7 @@ import { IMAGES_PETS, NAMES, GENES, AGES } from "./const";
 import { getRandomInteger } from "./util";
 
 function makeCounter() {
-    let count = -1;
+    let count = 0;
 
     return function () {
         if (count > 8) {
@@ -14,14 +14,15 @@ function makeCounter() {
     };
 }
 
-const counter = makeCounter();
+const counterImages = makeCounter();
+const counterNames = makeCounter();
 
 const generateImage = () => {
-    return IMAGES_PETS[counter()];
+    return IMAGES_PETS[counterImages()];
 }
 
 const generateName = () => {
-    return NAMES[counter()];
+    return NAMES[counterNames()];
 }
 
 const generateGene = () => {
