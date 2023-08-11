@@ -1,21 +1,25 @@
-export function CardKnowledge(): JSX.Element {
+import { CardKnowledgeType } from "../../types/types";
+
+type CardKnowledgeProps = {
+    cardsKnowledge: CardKnowledgeType;
+}
+
+export function CardKnowledge({cardsKnowledge}: CardKnowledgeProps): JSX.Element {
     return (
         <>
             <li className="knowledge__item">
                 <img
-                    src="./images/knowledge/image_3.png"
+                    src={cardsKnowledge.image}
                     alt="pameran"
                     className="knowledge__image"
                 />
                 <div className="knowledge__text">
                     <div className="knowledge__mark">Pet knowledge</div>
                     <h4 className="knowledge__title">
-                        What is a Pomeranian? How to Identify Pomeranian Dogs
+                    {cardsKnowledge.title}
                     </h4>
                     <p className="knowledgw__description">
-                        The Pomeranian, also known as the Pomeranian (Pom dog), is always in
-                        the top of the cutest pets. Not only that, the small, lovely, smart,
-                        friendly, and skillful circu...
+                    {cardsKnowledge.text}
                     </p>
                 </div>
             </li>

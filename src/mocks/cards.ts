@@ -1,30 +1,44 @@
 import nextId from "react-id-generator";
-import { CardType, Cards, CardProductType, CardsProducts } from "../types/types"
-import { IMAGES_PETS, NAMES, GENES, AGES, IMAGE_PRODUCTS, PRODUCT_NAMES, PRODUCT, SIZES, PRIZE } from "./const";
+import { CardType, Cards, CardProductType, CardsProducts, CardKnowledgeType, CardsKnowledge } from "../types/types"
+import { IMAGES_PETS, NAMES, GENES, AGES, IMAGE_PRODUCTS, PRODUCT_NAMES, PRODUCT, SIZES, PRIZE, IMAGE_KNOWLEDGE, TITLE_KNOWLEDGE, TEXT_KNOWLEDGE } from "./const";
 import { getRandomInteger } from "./util";
 
 const CARDS = 8;
+const CARDS_KNOWLEDGE = 3;
 
-function makeCounter() {
+function makeCounter(cards: number) {
     let count = 0;
 
     return function () {
-        if (count > CARDS) {
+        if (count > cards) {
             return count = 0;
         }
         return count++; // есть доступ к внешней переменной "count"
     };
 }
 
-const counterImages = makeCounter();
-const counterNames = makeCounter();
+const counterImages = makeCounter(CARDS);
+const counterNames = makeCounter(CARDS);
+const counterProductImages = makeCounter(CARDS);
+const counterProductNames = makeCounter(CARDS);
+const counterKnowledgeImg = makeCounter(CARDS_KNOWLEDGE);
+const counterKnowledgeTitle = makeCounter(CARDS_KNOWLEDGE);
+const counterKnowledgeText = makeCounter(CARDS_KNOWLEDGE);
 
-const generateImage = (images: Array<string>) => {
-    return images[counterImages()];
+const generateImage = () => {
+    return IMAGES_PETS[counterImages()];
 }
 
-const generateName = (names: Array<string>) => {
-    return names[counterNames()];
+const generateName = () => {
+    return NAMES[counterNames()];
+}
+
+const generateProductImage = () => {
+    return IMAGE_PRODUCTS[counterProductImages()];
+}
+
+const generateProductName = () => {
+    return PRODUCT_NAMES[counterProductNames()];
 }
 
 const generateGene = () => {
@@ -47,21 +61,32 @@ const generateProduct = () => {
 }
 
 const generateSize = () => {
-    const randomIndex = getRandomInteger(0, AGES.length - 1);
+    const randomIndex = getRandomInteger(0, SIZES.length - 1);
     return SIZES[randomIndex];
 }
 
 const generatePrize = () => {
-    const randomIndex = getRandomInteger(0, AGES.length - 1);
+    const randomIndex = getRandomInteger(0, PRIZE.length - 1);
     return PRIZE[randomIndex];
+}
+
+const generateKnowledgeImage = () => {
+    return IMAGE_KNOWLEDGE[counterKnowledgeImg()];
+}
+
+const generateKnowledgeTitle = () => {
+    return TITLE_KNOWLEDGE[counterKnowledgeTitle()];
+}
+const generateKnowledgeText = () => {
+    return TEXT_KNOWLEDGE[counterKnowledgeText()];
 }
 
 export const generateCard = (): CardType => {
     const card: CardType =
     {
         id: nextId(),
-        image: generateImage(IMAGES_PETS),
-        name: generateName(NAMES),
+        image: generateImage(),
+        name: generateName(),
         gene: generateGene(),
         age: generateAge(),
         price: generatePrice(),
@@ -73,8 +98,8 @@ export const generateProductCard = (): CardProductType => {
     const productCard: CardProductType =
     {
         id: nextId(),
-        image: generateImage(IMAGE_PRODUCTS),
-        name: generateName(PRODUCT_NAMES),
+        image: generateProductImage(),
+        name: generateProductName(),
         product: generateProduct(),
         size: generateSize(),
         price: generatePrice(),
@@ -83,5 +108,17 @@ export const generateProductCard = (): CardProductType => {
     return productCard
 }
 
+export const generateKnowledgeCard = (): CardKnowledgeType => {
+    const knowledgeCard: CardKnowledgeType =
+    {
+        id: nextId(),
+        image: generateKnowledgeImage(),
+        title: generateKnowledgeTitle(),
+        text: generateKnowledgeText(),
+    }
+    return knowledgeCard
+}
+
 export const cards: Cards = new Array(CARDS).fill(0).map(generateCard);
 export const cardsProducts: CardsProducts = new Array(CARDS).fill(0).map(generateProductCard);
+export const cardsKnowledge: CardsKnowledge = new Array(CARDS_KNOWLEDGE).fill(0).map(generateKnowledgeCard);

@@ -4,15 +4,16 @@ import { ProductsSection } from "../products-section/products-section";
 import { BrendsSection } from "../brends-section/brends-section";
 import { IntroAdoption } from "../intro-adoption/intro-adoption";
 import { KnowledgeSection } from "../knowledge-section/knowledge-section";
-import { Cards, CardsProducts } from "../../types/types";
+import { Cards, CardsKnowledge, CardsProducts } from "../../types/types";
 
 type MainProps = {
     cards: Cards
     cardsProducts: CardsProducts
+    cardsKnowledge: CardsKnowledge
 }
 
 
-export function Main({ cards, cardsProducts }: MainProps): JSX.Element {
+export function Main({ cards, cardsProducts, cardsKnowledge }: MainProps): JSX.Element {
     return (
         <>
             <main className="main">
@@ -26,7 +27,9 @@ export function Main({ cards, cardsProducts }: MainProps): JSX.Element {
                 />
                 <BrendsSection />
                 <IntroAdoption />
-                <KnowledgeSection />
+                <KnowledgeSection
+                    cardsKnowledge={cardsKnowledge}
+                />
             </main>
 
 

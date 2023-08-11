@@ -14,6 +14,9 @@ import fifthProduct from "../assets/images/products/image_5.png"
 import sixthProduct from "../assets/images/products/image_6.png"
 import seventhProduct from "../assets/images/products/image_7.png"
 import eighthProduct from "../assets/images/products/image_8.png"
+import firstKnowledge from "../assets/images/knowledge/image_1.png"
+import secondKnowledge from "../assets/images/knowledge/image_2.png"
+import thirdKnowledge from "../assets/images/knowledge/image_3.png"
 
 export const IMAGES_PETS = [
     PomeranianWhite,
@@ -90,4 +93,20 @@ export const SIZES = [
     '325',
     '124',
     '1500',
+]
+
+export const IMAGE_KNOWLEDGE = [
+    firstKnowledge, secondKnowledge, thirdKnowledge
+]
+
+export const TITLE_KNOWLEDGE = [
+    'What is a Pomeranian? How to Identify Pomeranian Dogs',
+    'Dog Diet You Need To Know',
+    'Why Dogs Bite and Destroy Furniture and How to Prevent It Effectively',
+]
+
+export const TEXT_KNOWLEDGE = [
+    'The Pomeranian, also known as the Pomeranian (Pom dog), is always in the top of the cutest pets. Not only that, the small, lovely, smart, friendly, and skillful circu...',
+    'Dividing a dogs diet may seem simple at first, but there are some rules you should know so that your dog can easily absorb the nutrients in the diet. For those who are just starting to raise dogs, especially...',
+    'Dog bites are common during development. However, no one wants to see their furniture or important items being bitten by a dog.'
 ]

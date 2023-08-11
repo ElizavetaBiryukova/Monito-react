@@ -20,3 +20,12 @@ export type CardProductType = {
 }
 
 export type CardsProducts = Array<CardProductType>;
+
+export type CardKnowledgeType = {
+    id: string,
+    image: string,
+    title: string,
+    text: string,
+}
+
+export type CardsKnowledge = Array<CardKnowledgeType>;

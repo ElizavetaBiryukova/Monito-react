@@ -1,6 +1,11 @@
+import { CardsKnowledge } from "../../types/types";
 import { CardKnowledge } from "../card-knowledge/card-knowledge";
 
-export function KnowledgeSection(): JSX.Element {
+type KnowledgeProps = {
+    cardsKnowledge: CardsKnowledge
+}
+
+export function KnowledgeSection({ cardsKnowledge }: KnowledgeProps): JSX.Element {
     return (
         <>
             <section className="knowledge">
@@ -14,7 +19,12 @@ export function KnowledgeSection(): JSX.Element {
                     </a>
                 </div>
                 <ul className="knowledge__list">
-                    <CardKnowledge />
+                {cardsKnowledge.map((card) => (
+                    <CardKnowledge
+                        key={card.id}
+                        cardsKnowledge={card}
+                    />
+                ))}
                 </ul>
             </section>
         </>

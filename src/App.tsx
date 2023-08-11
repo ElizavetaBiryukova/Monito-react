@@ -2,14 +2,15 @@ import './App.css'
 import { Header } from './components/header/header'
 import { Main } from './components/main/main'
 import { Footer } from './components/footer/footer'
-import { Cards, CardsProducts } from './types/types'
+import { Cards, CardsKnowledge, CardsProducts } from './types/types'
 
 type AppProps = {
   cards: Cards,
   cardsProducts: CardsProducts
+  cardsKnowledge: CardsKnowledge
 }
 
-function App({cards, cardsProducts}: AppProps) {
+function App({cards, cardsProducts, cardsKnowledge}: AppProps) {
 
   return (
     <>
@@ -17,6 +18,7 @@ function App({cards, cardsProducts}: AppProps) {
       <Main 
       cards = {cards}
       cardsProducts= {cardsProducts}
+      cardsKnowledge={cardsKnowledge}
       />
       <Footer />
     </>
