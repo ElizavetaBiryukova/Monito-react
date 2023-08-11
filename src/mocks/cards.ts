@@ -18,13 +18,23 @@ function makeCounter() {
 
 const counterImages = makeCounter();
 const counterNames = makeCounter();
+const counterProductImages = makeCounter();
+const counterProductNames = makeCounter();
 
-const generateImage = (images: Array<string>) => {
-    return images[counterImages()];
+const generateImage = () => {
+    return IMAGES_PETS[counterImages()];
 }
 
-const generateName = (names: Array<string>) => {
-    return names[counterNames()];
+const generateName = () => {
+    return NAMES[counterNames()];
+}
+
+const generateProductImage = () => {
+    return IMAGE_PRODUCTS[counterProductImages()];
+}
+
+const generateProductName = () => {
+    return PRODUCT_NAMES[counterProductNames()];
 }
 
 const generateGene = () => {
@@ -47,12 +57,12 @@ const generateProduct = () => {
 }
 
 const generateSize = () => {
-    const randomIndex = getRandomInteger(0, AGES.length - 1);
+    const randomIndex = getRandomInteger(0, SIZES.length - 1);
     return SIZES[randomIndex];
 }
 
 const generatePrize = () => {
-    const randomIndex = getRandomInteger(0, AGES.length - 1);
+    const randomIndex = getRandomInteger(0, PRIZE.length - 1);
     return PRIZE[randomIndex];
 }
 
@@ -60,8 +70,8 @@ export const generateCard = (): CardType => {
     const card: CardType =
     {
         id: nextId(),
-        image: generateImage(IMAGES_PETS),
-        name: generateName(NAMES),
+        image: generateImage(),
+        name: generateName(),
         gene: generateGene(),
         age: generateAge(),
         price: generatePrice(),
@@ -73,8 +83,8 @@ export const generateProductCard = (): CardProductType => {
     const productCard: CardProductType =
     {
         id: nextId(),
-        image: generateImage(IMAGE_PRODUCTS),
-        name: generateName(PRODUCT_NAMES),
+        image: generateProductImage(),
+        name: generateProductName(),
         product: generateProduct(),
         size: generateSize(),
         price: generatePrice(),
