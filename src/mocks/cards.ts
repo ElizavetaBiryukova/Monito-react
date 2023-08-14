@@ -122,3 +122,4 @@ export const generateKnowledgeCard = (): CardKnowledgeType => {
 export const cards: Cards = new Array(CARDS).fill(0).map(generateCard);
 export const cardsProducts: CardsProducts = new Array(CARDS).fill(0).map(generateProductCard);
 export const cardsKnowledge: CardsKnowledge = new Array(CARDS_KNOWLEDGE).fill(0).map(generateKnowledgeCard);
+export const cardsSeeMore: Cards = new Array(4).fill(0).map(generateCard);

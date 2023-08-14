@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
-import { cards, cardsProducts, cardsKnowledge } from './mocks/cards.ts'
+import { cards, cardsProducts, cardsKnowledge, cardsSeeMore } from './mocks/cards.ts'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -9,6 +9,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       cards={cards}
       cardsProducts={cardsProducts}
       cardsKnowledge={cardsKnowledge}
+      cardsSeeMore={cardsSeeMore}
     />
   </React.StrictMode>,
 )

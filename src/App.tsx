@@ -11,6 +11,7 @@ type AppProps = {
   cards: Cards,
   cardsProducts: CardsProducts
   cardsKnowledge: CardsKnowledge
+  cardsSeeMore: Cards,
 }
 
 enum AppRoute {
@@ -20,7 +21,7 @@ enum AppRoute {
 
 
 
-function App({ cards, cardsProducts, cardsKnowledge }: AppProps) {
+function App({ cards, cardsProducts, cardsKnowledge, cardsSeeMore }: AppProps) {
 
   const router = createBrowserRouter([
     {
@@ -33,7 +34,9 @@ function App({ cards, cardsProducts, cardsKnowledge }: AppProps) {
     },
     {
       path: AppRoute.Card,
-      element: <PetsPage />,
+      element: <PetsPage 
+      cardsSeeMore={cardsSeeMore}
+      />,
     },
   ]);
 
