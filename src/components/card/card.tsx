@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { CardType } from "../../types/types"
 
 type CardProps = {
@@ -5,9 +6,15 @@ type CardProps = {
 }
 
 export function Card({ card }: CardProps): JSX.Element {
+    const navigate = useNavigate();
+
+    const navigateToCardHandler = (id: string) => {
+        navigate(`/card/${id}`);
+    }
+
     return (
         <>
-            <li className="catalog__card card">
+            <li className="catalog__card card" onClick={() => navigateToCardHandler(card.id)}>
                 <img
                     src={card.image}
                     alt="dog"

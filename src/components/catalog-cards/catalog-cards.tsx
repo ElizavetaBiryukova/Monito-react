@@ -6,6 +6,7 @@ type CatalogProps = {
 }
 
 export function CatalogCards({ cards }: CatalogProps): JSX.Element {
+
     return (
         <>
             <ul className="pets__catalog catalog__cards">
