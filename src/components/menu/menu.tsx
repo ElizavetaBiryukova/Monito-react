@@ -82,7 +82,7 @@ export function Menu(): JSX.Element {
                         className="currency__logo"
                     />
                     <div className="currency__name">{сurrensy.name}</div>
-                    {/* <div className="currency__pointer">˅</div> */}
+                    <div style={openCurrensy ? {transform: 'rotate(0deg)'} : {transform: 'rotate(180deg)'}} className="currency__pointer">˅</div>
                 </div>
                 {openCurrensy && <CurrencList
                     onClick={handleChange}
