@@ -29,3 +29,8 @@ export type CardKnowledgeType = {
 }
 
 export type CardsKnowledge = Array<CardKnowledgeType>;
+
+export type Currensy = {
+    image: string,
+    name: string,
+}
