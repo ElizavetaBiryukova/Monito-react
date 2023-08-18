@@ -1,11 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import { CardType } from "../../types/types"
+import { Currensy } from '../../types/types';
 
 type CardProps = {
     card: CardType;
+    сurrensy: Currensy;
 }
 
-export function Card({ card }: CardProps): JSX.Element {
+export function Card({ card, сurrensy }: CardProps): JSX.Element {
     const navigate = useNavigate();
 
     const navigateToCardHandler = (id: string) => {
@@ -33,7 +35,7 @@ export function Card({ card }: CardProps): JSX.Element {
                     </p>
                     <p className="card__value">
                         <span className="card__price">{card.price.toLocaleString()}</span>
-                        <span className="card__currency"> VND</span>
+                        <span className="card__currency"> {сurrensy.name}</span>
                     </p>
                 </div>
             </li>

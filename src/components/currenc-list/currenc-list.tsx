@@ -1,7 +1,7 @@
 import vnd from '/src/assets/images/currency/vnd.svg'
 import ru from '/src/assets/images/currency/flag-for-russia.svg'
 import usd from '/src/assets/images/currency/usa.svg'
-
+// import { Currensy } from '../../types/types';
 
 export function CurrencList({ onClick }): JSX.Element {
     const handleChange = (event: React.MouseEvent<HTMLElement>) => {

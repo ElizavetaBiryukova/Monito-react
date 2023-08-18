@@ -1,11 +1,13 @@
 import { Card } from "../card/card"
 import { Cards } from "../../types/types"
+import { Currensy } from '../../types/types';
 
 type CatalogProps = {
     cards: Cards;
+    сurrensy: Currensy;
 }
 
-export function CatalogCards({ cards }: CatalogProps): JSX.Element {
+export function CatalogCards({ cards, сurrensy }: CatalogProps): JSX.Element {
 
     return (
         <>
@@ -14,6 +16,7 @@ export function CatalogCards({ cards }: CatalogProps): JSX.Element {
                     <Card
                         key={card.id}
                         card={card}
+                        сurrensy={сurrensy}
                     />
                 ))}
             </ul>

@@ -1,19 +1,24 @@
 import { useState } from 'react';
 import { ReactComponent as Logo } from '../../assets/images/icons/logo.svg';
 import { ReactComponent as Glass } from '../../assets/images/icons/glass.svg';
-import Vnd from '../../assets/images/currency/vnd.svg';
+// import Vnd from '../../assets/images/currency/vnd.svg';
 import { Link } from 'react-router-dom';
 import { CurrencList } from '../currenc-list/currenc-list';
 import { Currensy } from '../../types/types';
 
+type MenuProps = {
+    сurrensy: Currensy;
+    setCurrensy: React.Dispatch<React.SetStateAction<Currensy>>;
+};
 
-export function Menu(): JSX.Element {
+
+export function Menu({ сurrensy, setCurrensy }: MenuProps): JSX.Element {
 
     const [openCurrensy, setOpenCurrensy] = useState(false);
-    const [сurrensy, setCurrensy] = useState<Currensy>({
-        image: Vnd,
-        name: 'VND',
-    });
+    // const [сurrensy, setCurrensy] = useState<Currensy>({
+    //     image: Vnd,
+    //     name: 'VND',
+    // });
 
     const handleChange = (obj: Currensy) => {
         setCurrensy(obj)
@@ -82,7 +87,7 @@ export function Menu(): JSX.Element {
                         className="currency__logo"
                     />
                     <div className="currency__name">{сurrensy.name}</div>
-                    <div style={openCurrensy ? {transform: 'rotate(0deg)'} : {transform: 'rotate(180deg)'}} className="currency__pointer">˅</div>
+                    <div style={openCurrensy ? { transform: 'rotate(0deg)' } : { transform: 'rotate(180deg)' }} className="currency__pointer">˅</div>
                 </div>
                 {openCurrensy && <CurrencList
                     onClick={handleChange}

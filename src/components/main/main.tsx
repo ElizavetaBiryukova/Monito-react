@@ -5,21 +5,24 @@ import { BrendsSection } from "../brends-section/brends-section";
 import { IntroAdoption } from "../intro-adoption/intro-adoption";
 import { KnowledgeSection } from "../knowledge-section/knowledge-section";
 import { Cards, CardsKnowledge, CardsProducts } from "../../types/types";
+import { Currensy } from '../../types/types';
 
 type MainProps = {
-    cards: Cards
-    cardsProducts: CardsProducts
-    cardsKnowledge: CardsKnowledge
+    cards: Cards;
+    cardsProducts: CardsProducts;
+    cardsKnowledge: CardsKnowledge;
+    сurrensy: Currensy;
 }
 
 
-export function Main({ cards, cardsProducts, cardsKnowledge }: MainProps): JSX.Element {
+export function Main({ cards, cardsProducts, cardsKnowledge, сurrensy }: MainProps): JSX.Element {
     return (
         <>
             <main className="main">
                 <h1 className="visually-hidden">Monito - pet shop</h1>
                 <PetsSection
                     cards={cards}
+                    сurrensy={сurrensy}
                 />
                 <IntroBlue />
                 <ProductsSection
