@@ -1,10 +1,13 @@
 import { CardProductType } from "../../types/types"
+import { Currensy } from '../../types/types'
 
 type CardProductProps = {
     cardsProducts: CardProductType;
+    сurrensy: Currensy;
+    indexCurr: number;
 }
 
-export function CardProduct({cardsProducts}: CardProductProps): JSX.Element {
+export function CardProduct({ cardsProducts, сurrensy, indexCurr }: CardProductProps): JSX.Element {
     return (
         <>
             <li className="catalog__card card">
@@ -25,8 +28,8 @@ export function CardProduct({cardsProducts}: CardProductProps): JSX.Element {
                         </span>
                     </p>
                     <p className="card__value">
-                        <span className="card__price">{cardsProducts.price}</span>
-                        <span className="card__currency">VND</span>
+                        <span className="card__price">{Math.ceil(cardsProducts.price / indexCurr).toLocaleString()}</span>
+                        <span className="card__currency"> {сurrensy.name}</span>
                     </p>
                 </div>
                 <div className="card__prize">{cardsProducts.prize}</div>

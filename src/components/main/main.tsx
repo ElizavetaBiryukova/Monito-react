@@ -29,6 +29,8 @@ export function Main({ cards, cardsProducts, cardsKnowledge, сurrensy, indexCur
                 <IntroBlue />
                 <ProductsSection
                     cardsProducts={cardsProducts}
+                    сurrensy={сurrensy}
+                    indexCurr={indexCurr}
                 />
                 <BrendsSection />
                 <IntroAdoption />

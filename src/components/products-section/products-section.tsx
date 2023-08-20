@@ -1,12 +1,15 @@
 import { CatalogProducts } from "../catalog-products/catalog-cards";
 import { CardsProducts } from "../../types/types";
+import { Currensy } from '../../types/types';
 
 type ProductsProps = {
-    cardsProducts: CardsProducts
+    cardsProducts: CardsProducts;
+    сurrensy: Currensy;
+    indexCurr: number;
 }
 
 
-export function ProductsSection({cardsProducts}: ProductsProps): JSX.Element {
+export function ProductsSection({ cardsProducts, сurrensy, indexCurr }: ProductsProps): JSX.Element {
     return (
         <>
             <section className="products">
@@ -21,8 +24,10 @@ export function ProductsSection({cardsProducts}: ProductsProps): JSX.Element {
                         <div className="view__sign">View more &gt;</div>
                     </a>
                 </div>
-                <CatalogProducts 
-                cardsProducts={cardsProducts}
+                <CatalogProducts
+                    cardsProducts={cardsProducts}
+                    сurrensy={сurrensy}
+                    indexCurr={indexCurr}
                 />
             </section>
         </>
