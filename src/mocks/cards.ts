@@ -52,7 +52,7 @@ const generateAge = () => {
 }
 
 const generatePrice = () => {
-    const randomIndex = getRandomInteger(4000000, 9000000);
+    const randomIndex = getRandomInteger(50000, 300000);
     return randomIndex;
 }
 

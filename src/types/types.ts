@@ -36,7 +36,7 @@ export type Currensy = {
 }
 
 export type Price = {
-    Name: string,
+    CharCode: string,
     Value: number,
 }
 
@@ -45,3 +45,4 @@ export type Curr = {
     USD: Price,
     RU: Price
 }
+

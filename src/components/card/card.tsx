@@ -2,26 +2,34 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CardType } from "../../types/types"
 import { Currensy } from '../../types/types';
-// import { Price } from '../../types/types';
 import { Curr } from '../../types/types';
 import axios from 'axios';
-// import { changePrice } from "../../scripts/rates";
-// import * as fx from 'money';
-// console.log(fx(6).from('USD').to('VND'))
+
 type CardProps = {
     card: CardType;
     сurrensy: Currensy;
 }
 
 interface RateListI {
-    currencyList: Curr[],
+    currencyList: Array<Curr>,
 }
 
 export function Card({ card, сurrensy }: CardProps): JSX.Element {
     const [rateList, setRateList] = useState<RateListI>({
         currencyList: [],
     })
-    console.log(rateList.currencyList[0].VND.CharCode)
+
+    let indexCurr: number = 1;
+    Object.entries(rateList.currencyList)?.map(currency => {
+        if (сurrensy.name === 'VND') {
+            indexCurr = currency[1].VND.Value;
+        } else if (сurrensy.name === 'USD') {
+            indexCurr = currency[1].VND.Value;
+        } else if (сurrensy.name === 'RU') {
+            indexCurr = 1;
+        }
+    })
+
     const navigate = useNavigate();
 
     const navigateToCardHandler = (id: string) => {
@@ -58,7 +66,7 @@ export function Card({ card, сurrensy }: CardProps): JSX.Element {
                         </span>
                     </p>
                     <p className="card__value">
-                        <span className="card__price">{card.price.toLocaleString()}</span>
+                        <span className="card__price">{Math.ceil(card.price / indexCurr).toLocaleString()}</span>
                         <span className="card__currency"> {сurrensy.name}</span>
                     </p>
                 </div>
