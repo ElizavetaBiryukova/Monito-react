@@ -1,18 +1,42 @@
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CardType } from "../../types/types"
 import { Currensy } from '../../types/types';
-
+// import { Price } from '../../types/types';
+import { Curr } from '../../types/types';
+import axios from 'axios';
+// import { changePrice } from "../../scripts/rates";
+// import * as fx from 'money';
+// console.log(fx(6).from('USD').to('VND'))
 type CardProps = {
     card: CardType;
     сurrensy: Currensy;
 }
 
+interface RateListI {
+    currencyList: Curr[],
+}
+
 export function Card({ card, сurrensy }: CardProps): JSX.Element {
+    const [rateList, setRateList] = useState<RateListI>({
+        currencyList: [],
+    })
+    console.log(rateList.currencyList[0].VND.CharCode)
     const navigate = useNavigate();
 
     const navigateToCardHandler = (id: string) => {
         navigate(`/card/${id}`);
     }
+
+    useEffect(() => {
+        const promise = axios.get('https://www.cbr-xml-daily.ru/daily_json.js')
+        promise.then((res) => {
+            const rates = res.data
+            setRateList({
+                currencyList: [rates.Valute],
+            })
+        })
+    }, [])
 
     return (
         <>

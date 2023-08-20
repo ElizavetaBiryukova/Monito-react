@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css'
 import {
   createBrowserRouter,
@@ -6,12 +7,14 @@ import {
 import { MainPage } from './components/main-page/main-page';
 import { Cards, CardsKnowledge, CardsProducts } from './types/types'
 import { PetsPage } from './components/pets-page/pets-page';
+import { Currensy } from './types/types';
+import Vnd from './assets/images/currency/vnd.svg';
 
 type AppProps = {
-  cards: Cards,
-  cardsProducts: CardsProducts
-  cardsKnowledge: CardsKnowledge
-  cardsSeeMore: Cards,
+  cards: Cards;
+  cardsProducts: CardsProducts;
+  cardsKnowledge: CardsKnowledge;
+  cardsSeeMore: Cards;
 }
 
 enum AppRoute {
@@ -19,9 +22,12 @@ enum AppRoute {
   Card = '/card/:cardId',
 }
 
-
-
 function App({ cards, cardsProducts, cardsKnowledge, cardsSeeMore }: AppProps) {
+
+  const [сurrensy, setCurrensy] = useState<Currensy>({
+    image: Vnd,
+    name: 'VND',
+  });
 
   const router = createBrowserRouter([
     {
@@ -30,12 +36,16 @@ function App({ cards, cardsProducts, cardsKnowledge, cardsSeeMore }: AppProps) {
         cards={cards}
         cardsProducts={cardsProducts}
         cardsKnowledge={cardsKnowledge}
+        сurrensy={сurrensy}
+        setCurrensy={setCurrensy}
       />,
     },
     {
       path: AppRoute.Card,
-      element: <PetsPage 
-      cardsSeeMore={cardsSeeMore}
+      element: <PetsPage
+        cardsSeeMore={cardsSeeMore}
+        сurrensy={сurrensy}
+        setCurrensy={setCurrensy}
       />,
     },
   ]);

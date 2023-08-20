@@ -34,3 +34,14 @@ export type Currensy = {
     image: string,
     name: string,
 }
+
+export type Price = {
+    Name: string,
+    Value: number,
+}
+
+export type Curr = {
+    VND: Price,
+    USD: Price,
+    RU: Price
+}
