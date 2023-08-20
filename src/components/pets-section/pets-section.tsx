@@ -5,9 +5,10 @@ import { Currensy } from '../../types/types';
 type PetsProps = {
     cards: Cards;
     сurrensy: Currensy;
+    indexCurr: number;
 }
 
-export function PetsSection({ cards, сurrensy }: PetsProps): JSX.Element {
+export function PetsSection({ cards, сurrensy, indexCurr }: PetsProps): JSX.Element {
     return (
         <>
             <section className="pets">
@@ -23,6 +24,7 @@ export function PetsSection({ cards, сurrensy }: PetsProps): JSX.Element {
                 <CatalogCards
                     cards={cards}
                     сurrensy={сurrensy}
+                    indexCurr={indexCurr}
                 />
             </section>
         </>

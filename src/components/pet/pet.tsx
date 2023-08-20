@@ -13,9 +13,10 @@ import { Currensy } from '../../types/types';
 
 type PetProps = {
     сurrensy: Currensy;
+    indexCurr: number;
 }
 
-export function Pet({ сurrensy }: PetProps): JSX.Element {
+export function Pet({ сurrensy, indexCurr }: PetProps): JSX.Element {
     return (
         <>
             <section className="product">
@@ -99,7 +100,7 @@ export function Pet({ сurrensy }: PetProps): JSX.Element {
                 </div>
                 <p className="product__code">SKU #1000078</p>
                 <h2 className="product__title">Shiba Inu Sepia</h2>
-                <p className="product__price">34.000.000 {сurrensy.name}</p>
+                <p className="product__price">{Math.ceil(200000 / indexCurr)} {сurrensy.name}</p>
                 <div className="product__button-wrapper">
                     <a className="product__link" href="!#">
                         <div className="product__contact">Contact us</div>

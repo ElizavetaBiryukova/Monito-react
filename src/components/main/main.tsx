@@ -12,10 +12,11 @@ type MainProps = {
     cardsProducts: CardsProducts;
     cardsKnowledge: CardsKnowledge;
     сurrensy: Currensy;
+    indexCurr: number;
 }
 
 
-export function Main({ cards, cardsProducts, cardsKnowledge, сurrensy }: MainProps): JSX.Element {
+export function Main({ cards, cardsProducts, cardsKnowledge, сurrensy, indexCurr }: MainProps): JSX.Element {
     return (
         <>
             <main className="main">
@@ -23,6 +24,7 @@ export function Main({ cards, cardsProducts, cardsKnowledge, сurrensy }: MainPr
                 <PetsSection
                     cards={cards}
                     сurrensy={сurrensy}
+                    indexCurr={indexCurr}
                 />
                 <IntroBlue />
                 <ProductsSection

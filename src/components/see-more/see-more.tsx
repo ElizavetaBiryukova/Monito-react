@@ -5,9 +5,10 @@ import { Currensy } from '../../types/types';
 type SeeMoreProps = {
     cardsSeeMore: Cards;
     сurrensy: Currensy;
+    indexCurr: number;
 }
 
-export function SeeMore({ cardsSeeMore, сurrensy }: SeeMoreProps): JSX.Element {
+export function SeeMore({ cardsSeeMore, сurrensy, indexCurr }: SeeMoreProps): JSX.Element {
     return (
         <>
             <section className="see-more">
@@ -21,6 +22,7 @@ export function SeeMore({ cardsSeeMore, сurrensy }: SeeMoreProps): JSX.Element 
                             key={card.id}
                             card={card}
                             сurrensy={сurrensy}
+                            indexCurr={indexCurr}
                         />
                     ))}
                 </ul>

@@ -10,9 +10,10 @@ type AppProps = {
     cardsKnowledge: CardsKnowledge;
     сurrensy: Currensy;
     setCurrensy: React.Dispatch<React.SetStateAction<Currensy>>;
+    indexCurr: number;
 };
 
-export function MainPage({ cards, cardsProducts, cardsKnowledge, сurrensy, setCurrensy }: AppProps): JSX.Element {
+export function MainPage({ cards, cardsProducts, cardsKnowledge, сurrensy, setCurrensy, indexCurr }: AppProps): JSX.Element {
 
     return (
         <>
@@ -25,6 +26,7 @@ export function MainPage({ cards, cardsProducts, cardsKnowledge, сurrensy, setC
                 cardsProducts={cardsProducts}
                 cardsKnowledge={cardsKnowledge}
                 сurrensy={сurrensy}
+                indexCurr={indexCurr}
             />
             <Footer />
         </>
